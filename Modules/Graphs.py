@@ -99,7 +99,6 @@ class EMGraphConsensus:
             is_converged = self.run_em_iteration(text)
             if is_converged:
                 break
-            # if iter_num == max_iter - 1:
 
         final_consensus = self.e_step(text)
         return final_consensus, self.agents

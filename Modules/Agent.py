@@ -15,7 +15,7 @@ class GraphRAGAgent:
     def __init__(self, agent_id: AgentID, agent_model= "qwen-turbo", use_ollama=False, ollama_chat_model: str = "glm-5:cloud", use_deepseek=False):
         self.agent_model = agent_model
         self.agent_id = agent_id
-        self.credibility = 0.5  # 初始可信度 θ_i^(0) = 0.5
+        self.credibility = 0.5
         self.use_ollama = use_ollama
         self.ollama_chat_model = ollama_chat_model
         self.use_deepseek = use_deepseek
@@ -53,7 +53,7 @@ class GraphRAGAgent:
                 )
                 triples_str = response.choices[0].message.content.strip()
             except Exception as e:
-                print(f"Agent {self.agent_id} Deepseek 抽取失败: {e}")
+                print(f"Agent {self.agent_id} Deepseek Fail: {e}")
                 return []
         else:
             client = OpenAI(
