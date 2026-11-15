@@ -12,11 +12,11 @@ from py2neo import Graph, Node, Relationship
 from Modules.ollama_cloud import ollama_chat_completion, ollama_embed
 from config import DeepSeek_key
 
-NEO4J_URI = "bolt://localhost:7687"
-NEO4J_USER = "neo4j"
-NEO4J_PASSWORD = "88888888"
+NEO4J_URI = "xxx"
+NEO4J_USER = "xxx"
+NEO4J_PASSWORD = "xxx"
 
-QWEN_API_KEY = "sk-b6599be971d84854b59c10a1f7b625a8"
+QWEN_API_KEY = "sk-xxx"
 
 VECTOR_INDEX_PATH = "../Storage/graphrag_vector_index"
 ENTITY_EMBEDDING_PATH = "../Storage/entity_embeddings.json"
